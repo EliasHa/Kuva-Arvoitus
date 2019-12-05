@@ -1,3 +1,108 @@
 *{
     box-sizing: border-box;
 }
+
+body{
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+
+.site-nav{
+    background-color: #7F7F7F;
+    height: 44px;
+    display: grid;
+    grid-template-columns: 40vw 40vw 20vw;
+    text-align: center;
+}
+
+.nav-links{
+    color: white;
+    width: 8rem;
+    height: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    text-decoration: none;
+    border: 2px #373737;
+}
+
+.nav-links:hover{
+    background-color: #919191;
+}
+
+.nav-links-active{
+    background-color: #5f5f5f;
+}
+
+.login-dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.login-dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #919191;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-height: 200px;
+}
+
+
+input[type=text], input[type=password]{
+    width: 90%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button{
+    background-color: #5f5f5f;
+    color: white;
+    padding: 6px 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+}
+
+.game-section{
+    height: calc(100% - 44px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.img-section{
+    height: 100%;
+    width: 100%;
+}
+
+.map-section{
+    height: 100%;
+    width: 100%;
+}
+
+.game-picture{
+    width: 100%;
+}
+
+.map{
+    height: 100%;
+    width: 100%;
+}
+
+.login-dropdown:hover .login-dropdown-content{
+    display: block;
+}
+
+.login-dropdown:hover .nav-link-login{
+    background-color: #919191;
+}

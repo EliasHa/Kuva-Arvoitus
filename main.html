@@ -1,13 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/main-style.css">
-    <script src="https://kit.fontawesome.com/213243ed3e.js" crossorigin="anonymous"></script>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href='css/main-style.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
+    <script crossorigin='anonymous' src='https://kit.fontawesome.com/213243ed3e.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
     <title>Kuva-Arvoitus</title>
 </head>
 <body>
+<div class="wrapper">
+    <div class='navbar'>
+        <div class='navbar-child'>
+            <nav class='nav-header'>
+                <div class='site-nav' id='links'>
+                    <div class='nav-links nav-link-home nav-links-active' onclick='location.href="main.html";' style="cursor: pointer;">Home</div>
+                    <div class='nav-links nav-link-highscore' onclick='location.href="highscore.html";' style="cursor: pointer;">Highscores</div>
+                    <div class='login-dropdown'>
+                        <div class='nav-links nav-link-login' style="cursor: pointer;">Login</div>
+                        <div class='login-dropdown-content'>
+                            <form action='main.html' method='post'>
+                                <label for='uname'><b>Username</b></label>
+                                <input type='text' placeholder='Enter Username' name='uname' required>
 
+                                <label for='psw'><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                <button type="submit">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="game-section">
+        <div class="img-section">
+            <img class="game-picture" src="https://countrylakesdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg" alt="Placeholder">
+        </div>
+
+        <div class="map-section">
+            <div id="map" class="map">
+                <script type="text/javascript" src="js/mapscript.js"></script>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
