@@ -1,13 +1,10 @@
 'use strict';
-var map = new ol.Map({
-    target: 'map',
-    layers: [
-        new ol.layer.Tile({
-            source: new ol.source.OSM()
-        })
-    ],
-    view: new ol.View({
-        center: ol.proj.fromLonLat([24.945831, 60.192059]),
-        zoom: 10
-    })
+mapboxgl.accessToken = 'pk.eyJ1IjoiZWxpYXNoYWoiLCJhIjoiY2szeW9rdjRlMG5zMTNtcWM5aHFvcjJiMSJ9.0KHgS7rc1xWuAGzD1HpFiQ';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [24.96, 60.19],
+    zoom: 7
 });
+
+map.addControl(new mapboxgl.NavigationControl());
