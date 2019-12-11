@@ -19,6 +19,7 @@ const getUser = async (id) => {
         return rows;
     } catch (e) {
         console.log('error', e.message);
+        return {error: 'error in database query'};
     }
 };
 
@@ -28,6 +29,7 @@ const addUser = async (user) => {
         return rows;
     } catch (e) {
         console.log('error', e.message);
+        return {error: 'error in database query'};
     }
 };
 

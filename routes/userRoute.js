@@ -11,9 +11,9 @@ router.get('/:id', userController.user_get);
 router.post(
     '/',
     [
-            body('name', 'minimum 3 characters').isLength({min: 3}),
+            body('username', 'minimum 3 characters').isLength({min: 3}),
             body('email', 'email is not valid').isEmail(),
-            body('passwd', 'at least one upper case letter').
+            body('password', 'at least one upper case letter').
             matches('(?=.*[A-Z]).{8,}'),
             sanitizeBody('name').escape(),
     ],

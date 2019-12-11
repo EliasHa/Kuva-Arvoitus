@@ -24,13 +24,14 @@ const user_create_post = async (req, res) => {
     } else {
         //const hash = bcrypt.hashSync(req.body.password, salt);
         const params = [
-            req.body.name,
             req.body.email,
-            req.body.passwd,
-            //hash,
+            req.body.username,
+            req.body.password,
+            //hash
         ];
-        const result = await userModel.addUser(params);
-        await res.json(result);
+        const response = await userModel.addUser(params);
+        const user = await userModel.getUser([response.insertId]);
+        await res.json(user);
     }
 };
 

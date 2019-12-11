@@ -2,25 +2,9 @@
 const url = 'http://localhost:3000'; // change url when uploading to server
 
 // select existing html elements
-const loginWrapper = document.querySelector('#login-wrapper');
 const userInfo = document.querySelector('#user-info');
-const logOut = document.querySelector('#log-out');
-const main = document.querySelector('main');
 const loginForm = document.querySelector('#login-form');
 const addUserForm = document.querySelector('#add-user-form');
-const addForm = document.querySelector('#add-cat-form');
-const modForm = document.querySelector('#mod-cat-form');
-const ul = document.querySelector('ul');
-const userLists = document.querySelectorAll('.add-owner');
-const imageModal = document.querySelector('#image-modal');
-const modalImage = document.querySelector('#image-modal img');
-const close = document.querySelector('#image-modal a');
-
-// close modal
-close.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    imageModal.classList.toggle('hide');
-});
 
 // AJAX call
 
@@ -45,12 +29,6 @@ loginForm.addEventListener('submit', async (evt) => {
     } else {
         // save token
         sessionStorage.setItem('token', json.token);
-        // show/hide forms + cats
-        loginWrapper.style.display = 'none';
-        logOut.style.display = 'block';
-        main.style.display = 'block';
-        userInfo.innerHTML = `Hello ${json.user.name}`;
-        getUsers();
     }
 });
 /*
@@ -98,18 +76,4 @@ addUserForm.addEventListener('submit', async (evt) => {
     // save token
     sessionStorage.setItem('token', json.token);
     // show/hide forms + cats
-    loginWrapper.style.display = 'none';
-    logOut.style.display = 'block';
-    main.style.display = 'block';
-    userInfo.innerHTML = `Hello ${json.user.name}`;
-    getCat();
-    getUsers();
 });
-
-// when app starts, check if token exists and hide login form, show logout button and main content, get cats and users
-if (sessionStorage.getItem('token')) {
-    loginWrapper.style.display = 'none';
-    logOut.style.display = 'block';
-    main.style.display = 'block';
-    getUsers();
-}
