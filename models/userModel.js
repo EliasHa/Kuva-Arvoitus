@@ -11,6 +11,16 @@ const addUser = async (user) => {
     }
 };
 
+const getUserLogin = async (params) => {
+    try {
+        console.log(params);
+        const[rows] = await promisePool.execute('SELECT * FROM users WHERE user_name = ?;', params);
+        return rows;
+    } catch (e) {
+        console.log('error', e.message);
+    }
+};
+
 module.exports = {
-    addUser
+    addUser, getUserLogin,
 };
