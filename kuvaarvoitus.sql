@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `images` (
   `img_lat` double NOT NULL,
   `img_auth_id` int(11) NOT NULL,
   `img_karma` int(11) NOT NULL DEFAULT 0,
+  `playtimes` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`img_id`),
   KEY `ImageAuthKey` (`img_auth_id`),
   CONSTRAINT `ImageAuthKey` FOREIGN KEY (`img_auth_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
