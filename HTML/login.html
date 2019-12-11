@@ -24,6 +24,22 @@
                 </div>
             </form>
         </div>
+        <div class="forms">
+            <div class="form-wrapper">
+                <form class="light-border" id="add-user-form">
+                    <input class="light-border"
+                           type="text"
+                           name="name"
+                           pattern=".{3,}"
+                           placeholder="Name"
+                           required>
+                    <input class="light-border" type="email" name="username" placeholder="email" required>
+                    <input class="light-border" type="password" name="password" pattern="(?=.*[A-Z]).{8,}"
+                           placeholder="Password" required>
+                    <button class="light-border" type="submit">Save</button>
+                </form>
+            </div>
+        </div>
 </div>
 <script src="./js/serialize.js"></script>
 <script src="./js/main2.js"></script>
