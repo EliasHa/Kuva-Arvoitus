@@ -10,14 +10,14 @@
     <div class="forms" id="login-wrapper">
         <div class="form-wrapper">
             <h3>Login</h3>
-            <form id="login-form" class="light-border">
+            <form class="light-border" id="login-form">
                 <div>
                     <label>Username:</label>
-                    <input class="light-border" type="text" name="username"/>
+                    <input class="light-border" name="username" type="text"/>
                 </div>
                 <div>
                     <label>Password:</label>
-                    <input class="light-border" type="password" name="password"/>
+                    <input class="light-border" name="password" type="password"/>
                 </div>
                 <div>
                     <button class="light-border" type="submit">Log In</button>
@@ -28,18 +28,19 @@
             <div class="form-wrapper">
                 <form class="light-border" id="add-user-form">
                     <input class="light-border"
-                           type="text"
                            name="username"
                            pattern=".{3,}"
                            placeholder="Name"
-                           required>
-                    <input class="light-border" type="email" name="email" placeholder="email" required>
-                    <input class="light-border" type="password" name="password" pattern="(?=.*[A-Z]).{8,}"
-                           placeholder="Password" required>
+                           required
+                           type="text">
+                    <input class="light-border" name="email" placeholder="email" required type="email">
+                    <input class="light-border" name="password" pattern="(?=.*[A-Z]).{8,}" placeholder="Password"
+                           required type="password">
                     <button class="light-border" type="submit">Save</button>
                 </form>
             </div>
         </div>
+    </div>
 </div>
 <script src="./js/serialize.js"></script>
 <script src="./js/main2.js"></script>
