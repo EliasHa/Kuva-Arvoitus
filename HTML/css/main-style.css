@@ -118,18 +118,28 @@ button{
     z-index: 0;
 }
 
-.guess-confirm-button{
+.guess-confirm-button-div{
     color: black;
     font-size: 1rem;
     width: 20%;
-    padding: 10px;
     text-decoration: none;
-    border: 2px #373737;
     z-index: 1;
+    padding: 0;
+    border: 2px #373737;
     position: absolute;
     bottom: 2vh;
     text-align: center;
-    background-color: #696969;
-    opacity: 0.8;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#guess-button{
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    color: black;
+    font-size: 1.5rem;
+    border: 2px #373737;
+    margin: 0;
     border-radius: 8px;
 }

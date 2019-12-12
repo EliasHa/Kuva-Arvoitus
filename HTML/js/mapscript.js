@@ -18,7 +18,9 @@ window.onload = function () {
         console.log('mousedown');
         if (marker === undefined){
             guessButton.style.cursor = 'pointer';
-            guessButton.style.backgroundColor = '#add8e6';
+            guessButton.style.backgroundColor = '#94afbe';
+            guessButton.onmouseover = hoverButton;
+            guessButton.onmouseout = unHoverButton;
             guessButton.onclick = printGuess;
             console.log('marker undefined');
             marker = new mapboxgl.Marker({
@@ -30,6 +32,14 @@ window.onload = function () {
         }
 
     });
+
+    function hoverButton() {
+        guessButton.style.backgroundColor = '#708c9b';
+    }
+
+    function unHoverButton() {
+        guessButton.style.backgroundColor = '#94afbe';
+    }
 
     function printGuess() {
         console.log(JSON.stringify(marker.getLngLat()));
