@@ -19,6 +19,7 @@ window.onload = function () {
         if (marker === undefined){
             guessButton.style.cursor = 'pointer';
             guessButton.style.backgroundColor = '#add8e6';
+            guessButton.onclick = printGuess;
             console.log('marker undefined');
             marker = new mapboxgl.Marker({
                 draggable: true
@@ -29,4 +30,8 @@ window.onload = function () {
         }
 
     });
+
+    function printGuess() {
+        console.log(JSON.stringify(marker.getLngLat()));
+    }
 };
