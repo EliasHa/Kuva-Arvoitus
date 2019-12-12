@@ -106,3 +106,30 @@ button{
 .login-dropdown:hover .nav-link-login{
     background-color: #919191;
 }
+
+.map-wrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map{
+    z-index: 0;
+}
+
+.guess-confirm-button{
+    color: black;
+    font-size: 1rem;
+    width: 20%;
+    padding: 10px;
+    text-decoration: none;
+    border: 2px #373737;
+    z-index: 1;
+    position: absolute;
+    bottom: 2vh;
+    text-align: center;
+    background-color: #696969;
+    opacity: 0.8;
+    border-radius: 8px;
+}
