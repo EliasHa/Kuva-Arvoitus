@@ -163,3 +163,32 @@ button{
     color: white;
     text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+    .nav-links{
+        width: 6rem;
+        font-size: 0.5rem;
+        padding: 8px;
+    }
+
+    .game-section{
+        display: block;
+    }
+
+    #guess-button{
+        padding: 6px;
+        font-size: 1rem;
+    }
+
+    .guess-time-div{
+        width: 50%;
+    }
+
+    .img-section{
+        height: 70%;
+    }
+
+    .site-nav{
+        height: 22px;
+    }
+}
