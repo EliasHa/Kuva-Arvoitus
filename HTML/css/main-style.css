@@ -154,8 +154,9 @@ button{
     position: absolute;
     background-color: #373737;
     opacity: 0.8;
-    top: 44px;
+    top: calc(44px + 2vh);
     border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 #guess-time{

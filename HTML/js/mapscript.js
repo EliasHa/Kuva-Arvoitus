@@ -4,6 +4,7 @@ window.onload = function () {
     var guessButton = document.getElementById('guess-button');
     var guessStartTime = new Date().getTime();
     var timeDifference;
+    guessButton.style.cursor = 'no-drop';
 
     var timer = setInterval(function () {
         var now = new Date().getTime();
